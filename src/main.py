@@ -52,6 +52,12 @@ async def conflicto_handler(request: Request, exc: ConflictoError):
     return _error(status.HTTP_409_CONFLICT, exc)
 
 
+# ---------- Salud (útil para comprobar el contenedor) ----------
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
 # ---------- Usuarios ----------
 @app.post("/usuarios", response_model=UsuarioRead, status_code=status.HTTP_201_CREATED)
 def crear_usuario(datos: UsuarioCreate):
