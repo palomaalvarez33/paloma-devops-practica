@@ -120,18 +120,20 @@ Debe terminar con `Flujo completado correctamente.`
 Códigos HTTP: 201 creado · 204 borrado · 400 datos/stock inválidos · 404 no encontrado · 409 email duplicado · 422 validación.
 
 ### 2.6 Publicar la imagen en Docker Hub (push)
+Imagen publicada: https://hub.docker.com/r/paalomalvarez/tienda-api
+
 ```bash
 docker login
-docker tag tienda-api:1.0.0 <usuario_dockerhub>/tienda-api:1.0.0
-docker tag tienda-api:1.0.0 <usuario_dockerhub>/tienda-api:latest
-docker push <usuario_dockerhub>/tienda-api:1.0.0
-docker push <usuario_dockerhub>/tienda-api:latest
+docker tag tienda-api:1.0.0 paalomalvarez/tienda-api:1.0.0
+docker tag tienda-api:1.0.0 paalomalvarez/tienda-api:latest
+docker push paalomalvarez/tienda-api:1.0.0
+docker push paalomalvarez/tienda-api:latest
 ```
 
 ### 2.7 Descargar y ejecutar la imagen publicada (pull)
 ```bash
-docker pull <usuario_dockerhub>/tienda-api:1.0.0
-docker run -d -p 8000:8000 <usuario_dockerhub>/tienda-api:1.0.0
+docker pull paalomalvarez/tienda-api:1.0.0
+docker run -d -p 8000:8000 paalomalvarez/tienda-api:1.0.0
 ```
 
 ---
