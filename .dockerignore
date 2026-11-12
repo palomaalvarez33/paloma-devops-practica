@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.git
+.gitignore
+.venv
+venv/
+.pytest_cache/
+.DS_Store
+tests/
+.env
+*.md
+Dockerfile*
+docker-compose.yml
+.dockerignore
+cliente_python/
+frontend/
+requirements-dev.txt
